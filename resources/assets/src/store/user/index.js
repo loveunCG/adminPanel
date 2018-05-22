@@ -109,7 +109,7 @@ export default {
 
         }
       }).catch(error => {
-        router.push('/error')
+        router.push('/login')
         commit('clearUser')
         location.reload()
         console.log(error.response)
@@ -122,7 +122,7 @@ export default {
         } else {
         }
       }).catch(error => {
-        router.push('/error')
+        router.push('/login')
         commit('clearUser')
         location.reload()
         console.log(error.response)
@@ -136,7 +136,7 @@ export default {
         } else {
         }
       }).catch(error => {
-        router.push('/error')
+        router.push('/login')
         commit('clearUser')
         location.reload()
         console.log(error.response)
