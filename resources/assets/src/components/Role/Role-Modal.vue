@@ -58,7 +58,14 @@
             <b-form-group>
               <label class="typo__label">Permission</label>
               <multiselect v-model="Role.permission" :options="permissions" :multiple="true" :close-on-select="false" :clear-on-select="false" :hide-selected="true" :preserve-search="true" placeholder="" label="name" track-by="name" :preselect-first="false">
-                <template slot="tag" slot-scope="props"><span class="custom__tag"><span>{{ props.option.language }}</span><span class="custom__remove" @click="props.remove(props.option)">❌</span></span></template>
+                <template slot="tag" slot-scope="props">
+                  <span class="custom__tag">
+                    <span>{{ props.option.language }}</span>
+                    <span class="custom__remove" @click="props.remove(props.option)">
+                      &nbsp;&nbsp;&nbsp;<i class="fa fa-window-close"></i>
+                    </span>
+                  </span>
+                </template>
               </multiselect>
             </b-form-group>
             <div class="form-group form-actions">
@@ -161,9 +168,9 @@ export default {
 .custom__tag{
   position: relative;
   display: inline-block;
-  padding: 4px 26px 4px 10px;
+  padding: 4px 6px 4px 10px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
   color: #fff;
   line-height: 1;
   background: #41b883;
